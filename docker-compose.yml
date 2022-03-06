@@ -1,0 +1,7 @@
+version: "3.8"
+services:
+  dynhost-ovh:
+    container_name: dynhost-ovh
+    build: .
+    env_file:
+      - .env
