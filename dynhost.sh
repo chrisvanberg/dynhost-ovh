@@ -21,6 +21,8 @@ else
   then
     RES=$(curl -s -m 5 -L --location-trusted --user "$LOGIN:$PASSWORD" "https://www.ovh.com/nic/update?system=dyndns&hostname=$HOST&myip=$CURRENT_IP")
     echo "[$CURRENT_DATETIME]: IPv4 has changed - request to OVH DynHost: $RES" >> $PATH_LOG
+  else
+    echo "[$CURRENT_DATETIME]: IPv4 hasn't changed ($CURRENT_IP)" >> $PATH_LOG
   fi
 fi
 
