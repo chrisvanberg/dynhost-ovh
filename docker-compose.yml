@@ -3,6 +3,8 @@ services:
   dynhost-ovh:
     container_name: dynhost-ovh
     build: .
+    environment:
+      - TZ=Europe/Brussels
     env_file:
       - .env
     network_mode: host
